@@ -1,0 +1,36 @@
+
+```{R Constants, include=FALSE}
+
+### ability scores and modifiers   
+str <- 11; strBonus <- 0
+con <- 18; conBonus <- 4 # used race, level bonus
+dex <- 15; dexBonus <- 2
+int <- 19; intBonus <- 0 # used racial bonus
+wis <- 12; wisBonus <- 1
+cha <- 18; chaBonus <- 4 # used level bonus here
+
+
+level <- 7
+name <- "Xinaeus Octevia"
+race <- "Rock Gnome"
+class <- "Sorcerer"
+subclass <- "Abberant Mind"
+background <- "Tinkerer"
+maxHP <- 48
+
+```
+
+# `r name` {-}
+
+## Basic Information
+
+Race: `r race`
+
+Class: `r class`
+
+Subclass: `r class`
+
+level: `r level`
+
+Background: `r level`
+

@@ -1,0 +1,10 @@
+# Spells
+
+We describe our methods in this chapter
+
+```{R, echo = FALSE}
+knitr::include_app("https://yihui.shinyapps.io/miniUI/", height = "600px")
+```
+```{R, echo = FALSE}
+knitr::include_app("http://127.0.0.1:8000", height = "600px")
+```

@@ -1,0 +1,8 @@
+rmd_files:
+  html: [
+    "00-BasicInformation.Rmd",
+    "01-PersonalInformation.Rmd",
+    "02-Combat.Rmd",
+    "03-Spells.Rmd",
+    "04-Equipment.Rmd"
+  ]
