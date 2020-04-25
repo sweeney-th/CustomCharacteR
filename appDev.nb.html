@@ -1751,45 +1751,100 @@ summary {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBEZWZpbmUgVUkgZm9yIGFwcCB0aGF0IGRyYXdzIGEgaGlzdG9ncmFtIC0tLS1cbnVpIDwtIGZsdWlkUGFnZShcblxuICAjIEFwcCB0aXRsZSAtLS0tXG4gIHRpdGxlUGFuZWwoXCJIZWxsbyBTaGlueSFcIiksXG5cbiAgIyBTaWRlYmFyIGxheW91dCB3aXRoIGlucHV0IGFuZCBvdXRwdXQgZGVmaW5pdGlvbnMgLS0tLVxuICBzaWRlYmFyTGF5b3V0KFxuXG4gICAgIyBTaWRlYmFyIHBhbmVsIGZvciBpbnB1dHMgLS0tLVxuICAgIHNpZGViYXJQYW5lbChcblxuICAgICAgIyBJbnB1dDogU2xpZGVyIGZvciB0aGUgbnVtYmVyIG9mIGJpbnMgLS0tLVxuICAgICAgc2xpZGVySW5wdXQoaW5wdXRJZCA9IFwiYmluc1wiLFxuICAgICAgICAgICAgICAgICAgbGFiZWwgPSBcIk51bWJlciBvZiBiaW5zOlwiLFxuICAgICAgICAgICAgICAgICAgbWluID0gMSxcbiAgICAgICAgICAgICAgICAgIG1heCA9IDUwLFxuICAgICAgICAgICAgICAgICAgdmFsdWUgPSAzMClcblxuICAgICksXG5cbiAgICAjIE1haW4gcGFuZWwgZm9yIGRpc3BsYXlpbmcgb3V0cHV0cyAtLS0tXG4gICAgbWFpblBhbmVsKFxuXG4gICAgICAjIE91dHB1dDogSGlzdG9ncmFtIC0tLS1cbiAgICAgIHBsb3RPdXRwdXQob3V0cHV0SWQgPSBcImRpc3RQbG90XCIpXG5cbiAgICApXG4gIClcbilcbmBgYCJ9 -->
-<pre class="r"><code># Define UI for app that draws a histogram ----
-ui &lt;- fluidPage(
-
-  # App title ----
-  titlePanel(&quot;Hello Shiny!&quot;),
-
-  # Sidebar layout with input and output definitions ----
-  sidebarLayout(
-
-    # Sidebar panel for inputs ----
-    sidebarPanel(
-
-      # Input: Slider for the number of bins ----
-      sliderInput(inputId = &quot;bins&quot;,
-                  label = &quot;Number of bins:&quot;,
-                  min = 1,
-                  max = 50,
-                  value = 30)
-
-    ),
-
-    # Main panel for displaying outputs ----
-    mainPanel(
-
-      # Output: Histogram ----
-      plotOutput(outputId = &quot;distPlot&quot;)
-
-    )
-  )
-)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIGxpYnJhcnkoc2hpbnkpXG4jIFxuIyB1aSA8LSBmbHVpZFBhZ2UoXG4jICAgYWN0aW9uQnV0dG9uKFwiZ29cIiwgXCJHb1wiKSxcbiMgICBudW1lcmljSW5wdXQoXCJuXCIsIFwiblwiLCA1MCksXG4jICAgcGxvdE91dHB1dChcInBsb3RcIilcbiMgKVxuIyBcbiMgc2VydmVyIDwtIGZ1bmN0aW9uKGlucHV0LCBvdXRwdXQpIHtcbiMgXG4jICAgcmFuZG9tVmFscyA8LSBldmVudFJlYWN0aXZlKGlucHV0JGdvLCB7XG4jICAgICBydW5pZihpbnB1dCRuKVxuIyAgIH0pXG4jIFxuIyAgIG91dHB1dCRwbG90IDwtIHJlbmRlclBsb3Qoe1xuIyAgICAgaGlzdChyYW5kb21WYWxzKCkpXG4jICAgfSlcbiMgfVxuIyBcbiMgc2hpbnlBcHAodWksIHNlcnZlcilcblxuYGBgIn0= -->
+<pre class="r"><code>
+# library(shiny)
+# 
+# ui &lt;- fluidPage(
+#   actionButton(&quot;go&quot;, &quot;Go&quot;),
+#   numericInput(&quot;n&quot;, &quot;n&quot;, 50),
+#   plotOutput(&quot;plot&quot;)
+# )
+# 
+# server &lt;- function(input, output) {
+# 
+#   randomVals &lt;- eventReactive(input$go, {
+#     runif(input$n)
+#   })
+# 
+#   output$plot &lt;- renderPlot({
+#     hist(randomVals())
+#   })
+# }
+# 
+# shinyApp(ui, server)
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZmx1aWRQYWdlKHRpdGxlUGFuZWwoXCJIZWxsbyBTaGlueSFcIiksIHNpZGViYXJMYXlvdXQoc2lkZWJhclBhbmVsKHNsaWRlcklucHV0KGlucHV0SWQgPSBcImJpbnNcIiwgIDogXG4gIGNvdWxkIG5vdCBmaW5kIGZ1bmN0aW9uIFwiZmx1aWRQYWdlXCJcbiJ9 -->
-<pre><code>Error in fluidPage(titlePanel(&quot;Hello Shiny!&quot;), sidebarLayout(sidebarPanel(sliderInput(inputId = &quot;bins&quot;,  : 
-  could not find function &quot;fluidPage&quot;</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMgT25seSBydW4gZXhhbXBsZXMgaW4gaW50ZXJhY3RpdmUgUiBzZXNzaW9uc1xuaWYgKGludGVyYWN0aXZlKCkpIHtcblxuICAjIGRlbW9pbmcgZ3JvdXAgc3VwcG9ydCBpbiB0aGUgYGNob2ljZXNgIGFyZ1xuICBzaGlueUFwcChcblxuICAgIHVpID0gZmx1aWRQYWdlKFxuICAgICAgc2VsZWN0SW5wdXQoXCJudW1EaWNlXCIsIFwiTnVtYmVyIG9mIGRpY2U6XCIsXG4gICAgICAgIGxpc3QoYE51bWJlcnNgID0gc2VxKDEsMjAsMSkpXG4gICAgICApLFxuICAgICAgc2VsZWN0SW5wdXQoXCJudW1TaWRlc1wiLCBcIlNpZGVzIHBlciBkaWU6XCIsXG4gICAgICAgIGxpc3QoYFNpZGVzYCA9IGxpc3QoNCw2LDgsMTAsMTIsMjAsMTAwKSlcbiAgICAgICksXG4gICAgICBzZWxlY3RJbnB1dChcImJvbnVzXCIsIFwiQm9udXM6XCIsXG4gICAgICAgIGxpc3QoYE51bWJlcnNgID0gc2VxKDAsMjAsMSkpXG4gICAgICApLFxuICAgICAgYWN0aW9uQnV0dG9uKFwicm9sbFwiLCBcIlJvbGxcIiksXG4gICAgICB0ZXh0T3V0cHV0KFwicmVzdWx0XCIpXG4gICAgKSxcbiAgICBcbiAgICBcbiAgICBzZXJ2ZXIgPSBmdW5jdGlvbihpbnB1dCwgb3V0cHV0KSB7XG4gICAgICBcbiAgICAgIHYgPC0gcmVhY3RpdmVWYWx1ZXMoZGF0YSA9IE5VTEwpXG4gICAgXG5cbiAgICAgIG9ic2VydmVFdmVudChpbnB1dCRudW1EaWNlLCB7XG4gICAgICAgIHYkbnVtRGljZSA8LSBhcy5pbnRlZ2VyKGlucHV0JG51bURpY2UpXG4gICAgICB9KVxuICAgIFxuICAgICAgb2JzZXJ2ZUV2ZW50KGlucHV0JG51bVNpZGVzLCB7XG4gICAgICAgIHYkbnVtU2lkZXMgPC0gIGFzLmludGVnZXIoaW5wdXQkbnVtU2lkZXMpXG4gICAgICB9KSAgXG4gICAgICBcbiAgICAgIG9ic2VydmVFdmVudChpbnB1dCRib251cywge1xuICAgICAgICB2JGJvbnVzIDwtICBhcy5pbnRlZ2VyKGlucHV0JGJvbnVzKVxuICAgICAgfSkgIFxuICAgICAgXG4gICAgICBcbiAgICAgIHJvbGxUb3RhbCA8LSBldmVudFJlYWN0aXZlKGlucHV0JHJvbGwsIHtcbiAgICAgICAgc3VtKHNhbXBsZSgxOnYkbnVtU2lkZXMsIHYkbnVtRGljZSwgcmVwbGFjZSA9IFRSVUUpKSArIHYkYm9udXNcbiAgICAgIH0pXG5cbiAgICAgIG91dHB1dCRyZXN1bHQgPC0gcmVuZGVyVGV4dCh7XG4gICAgICAgIHBhc3RlKFwiVG90YWw6XCIsIHJvbGxUb3RhbCgpKVxuICAgICAgfSlcbiAgICAgICBcbiAgICB9XG4gICAgXG4gICAgXG4gIClcbn1cbmBgYCJ9 -->
+<pre class="r"><code>## Only run examples in interactive R sessions
+if (interactive()) {
+
+  # demoing group support in the `choices` arg
+  shinyApp(
+
+    ui = fluidPage(
+      selectInput(&quot;numDice&quot;, &quot;Number of dice:&quot;,
+        list(`Numbers` = seq(1,20,1))
+      ),
+      selectInput(&quot;numSides&quot;, &quot;Sides per die:&quot;,
+        list(`Sides` = list(4,6,8,10,12,20,100))
+      ),
+      selectInput(&quot;bonus&quot;, &quot;Bonus:&quot;,
+        list(`Numbers` = seq(0,20,1))
+      ),
+      actionButton(&quot;roll&quot;, &quot;Roll&quot;),
+      textOutput(&quot;result&quot;)
+    ),
+    
+    
+    server = function(input, output) {
+      
+      v &lt;- reactiveValues(data = NULL)
+    
+
+      observeEvent(input$numDice, {
+        v$numDice &lt;- as.integer(input$numDice)
+      })
+    
+      observeEvent(input$numSides, {
+        v$numSides &lt;-  as.integer(input$numSides)
+      })  
+      
+      observeEvent(input$bonus, {
+        v$bonus &lt;-  as.integer(input$bonus)
+      })  
+      
+      
+      rollTotal &lt;- eventReactive(input$roll, {
+        sum(sample(1:v$numSides, v$numDice, replace = TRUE)) + v$bonus
+      })
+
+      output$result &lt;- renderText({
+        paste(&quot;Total:&quot;, rollTotal())
+      })
+       
+    }
+    
+    
+  )
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5MaXN0ZW5pbmcgb24gaHR0cDovLzEyNy4wLjAuMTo2NzgxXG4ifQ== -->
+<pre><code>
+Listening on http://127.0.0.1:6781</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
+<pre><code>NA</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge1J9CgpsaWJyYXJ5KHNoaW55KQoKIyBEZWZpbmUgVUkgZm9yIGFwcCB0aGF0IGRyYXdzIGEgaGlzdG9ncmFtIC0tLS0KdWkgPC0gZmx1aWRQYWdlKAoKICAjIEFwcCB0aXRsZSAtLS0tCiAgdGl0bGVQYW5lbCgiSGVsbG8gU2hpbnkhIiksCgogICMgU2lkZWJhciBsYXlvdXQgd2l0aCBpbnB1dCBhbmQgb3V0cHV0IGRlZmluaXRpb25zIC0tLS0KICBzaWRlYmFyTGF5b3V0KAoKICAgICMgU2lkZWJhciBwYW5lbCBmb3IgaW5wdXRzIC0tLS0KICAgIHNpZGViYXJQYW5lbCgKCiAgICAgICMgSW5wdXQ6IFNsaWRlciBmb3IgdGhlIG51bWJlciBvZiBiaW5zIC0tLS0KICAgICAgc2xpZGVySW5wdXQoaW5wdXRJZCA9ICJiaW5zIiwKICAgICAgICAgICAgICAgICAgbGFiZWwgPSAiTnVtYmVyIG9mIGJpbnM6IiwKICAgICAgICAgICAgICAgICAgbWluID0gMSwKICAgICAgICAgICAgICAgICAgbWF4ID0gNTAsCiAgICAgICAgICAgICAgICAgIHZhbHVlID0gMzApCgogICAgKSwKCiAgICAjIE1haW4gcGFuZWwgZm9yIGRpc3BsYXlpbmcgb3V0cHV0cyAtLS0tCiAgICBtYWluUGFuZWwoCgogICAgICAjIE91dHB1dDogSGlzdG9ncmFtIC0tLS0KICAgICAgcGxvdE91dHB1dChvdXRwdXRJZCA9ICJkaXN0UGxvdCIpCgogICAgKQogICkKKQoKIyBEZWZpbmUgc2VydmVyIGxvZ2ljIHJlcXVpcmVkIHRvIGRyYXcgYSBoaXN0b2dyYW0gLS0tLQpzZXJ2ZXIgPC0gZnVuY3Rpb24oaW5wdXQsIG91dHB1dCkgewoKICAjIEhpc3RvZ3JhbSBvZiB0aGUgT2xkIEZhaXRoZnVsIEdleXNlciBEYXRhIC0tLS0KICAjIHdpdGggcmVxdWVzdGVkIG51bWJlciBvZiBiaW5zCiAgIyBUaGlzIGV4cHJlc3Npb24gdGhhdCBnZW5lcmF0ZXMgYSBoaXN0b2dyYW0gaXMgd3JhcHBlZCBpbiBhIGNhbGwKICAjIHRvIHJlbmRlclBsb3QgdG8gaW5kaWNhdGUgdGhhdDoKICAjCiAgIyAxLiBJdCBpcyAicmVhY3RpdmUiIGFuZCB0aGVyZWZvcmUgc2hvdWxkIGJlIGF1dG9tYXRpY2FsbHkKICAjICAgIHJlLWV4ZWN1dGVkIHdoZW4gaW5wdXRzIChpbnB1dCRiaW5zKSBjaGFuZ2UKICAjIDIuIEl0cyBvdXRwdXQgdHlwZSBpcyBhIHBsb3QKICBvdXRwdXQkZGlzdFBsb3QgPC0gcmVuZGVyUGxvdCh7CgogICAgeCAgICA8LSBmYWl0aGZ1bCR3YWl0aW5nCiAgICBiaW5zIDwtIHNlcShtaW4oeCksIG1heCh4KSwgbGVuZ3RoLm91dCA9IGlucHV0JGJpbnMgKyAxKQoKICAgIGhpc3QoeCwgYnJlYWtzID0gYmlucywgY29sID0gIiM3NUFBREIiLCBib3JkZXIgPSAid2hpdGUiLAogICAgICAgICB4bGFiID0gIldhaXRpbmcgdGltZSB0byBuZXh0IGVydXB0aW9uIChpbiBtaW5zKSIsCiAgICAgICAgIG1haW4gPSAiSGlzdG9ncmFtIG9mIHdhaXRpbmcgdGltZXMiKQoKICAgIH0pCgp9CgpzaGlueUFwcCh1aSwgc2VydmVyKQpgYGA=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge1J9CgojIGxpYnJhcnkoc2hpbnkpCiMgCiMgdWkgPC0gZmx1aWRQYWdlKAojICAgYWN0aW9uQnV0dG9uKCJnbyIsICJHbyIpLAojICAgbnVtZXJpY0lucHV0KCJuIiwgIm4iLCA1MCksCiMgICBwbG90T3V0cHV0KCJwbG90IikKIyApCiMgCiMgc2VydmVyIDwtIGZ1bmN0aW9uKGlucHV0LCBvdXRwdXQpIHsKIyAKIyAgIHJhbmRvbVZhbHMgPC0gZXZlbnRSZWFjdGl2ZShpbnB1dCRnbywgewojICAgICBydW5pZihpbnB1dCRuKQojICAgfSkKIyAKIyAgIG91dHB1dCRwbG90IDwtIHJlbmRlclBsb3QoewojICAgICBoaXN0KHJhbmRvbVZhbHMoKSkKIyAgIH0pCiMgfQojIAojIHNoaW55QXBwKHVpLCBzZXJ2ZXIpCgpgYGAKCgpgYGB7cn0KIyMgT25seSBydW4gZXhhbXBsZXMgaW4gaW50ZXJhY3RpdmUgUiBzZXNzaW9ucwppZiAoaW50ZXJhY3RpdmUoKSkgewoKICAjIGRlbW9pbmcgZ3JvdXAgc3VwcG9ydCBpbiB0aGUgYGNob2ljZXNgIGFyZwogIHNoaW55QXBwKAoKICAgIHVpID0gZmx1aWRQYWdlKAogICAgICBzZWxlY3RJbnB1dCgibnVtRGljZSIsICJOdW1iZXIgb2YgZGljZToiLAogICAgICAgIGxpc3QoYE51bWJlcnNgID0gc2VxKDEsMjAsMSkpCiAgICAgICksCiAgICAgIHNlbGVjdElucHV0KCJudW1TaWRlcyIsICJTaWRlcyBwZXIgZGllOiIsCiAgICAgICAgbGlzdChgU2lkZXNgID0gbGlzdCg0LDYsOCwxMCwxMiwyMCwxMDApKQogICAgICApLAogICAgICBzZWxlY3RJbnB1dCgiYm9udXMiLCAiQm9udXM6IiwKICAgICAgICBsaXN0KGBOdW1iZXJzYCA9IHNlcSgwLDIwLDEpKQogICAgICApLAogICAgICBhY3Rpb25CdXR0b24oInJvbGwiLCAiUm9sbCIpLAogICAgICB0ZXh0T3V0cHV0KCJyZXN1bHQiKQogICAgKSwKICAgIAogICAgCiAgICBzZXJ2ZXIgPSBmdW5jdGlvbihpbnB1dCwgb3V0cHV0KSB7CiAgICAgIAogICAgICB2IDwtIHJlYWN0aXZlVmFsdWVzKGRhdGEgPSBOVUxMKQogICAgCgogICAgICBvYnNlcnZlRXZlbnQoaW5wdXQkbnVtRGljZSwgewogICAgICAgIHYkbnVtRGljZSA8LSBhcy5pbnRlZ2VyKGlucHV0JG51bURpY2UpCiAgICAgIH0pCiAgICAKICAgICAgb2JzZXJ2ZUV2ZW50KGlucHV0JG51bVNpZGVzLCB7CiAgICAgICAgdiRudW1TaWRlcyA8LSAgYXMuaW50ZWdlcihpbnB1dCRudW1TaWRlcykKICAgICAgfSkgIAogICAgICAKICAgICAgb2JzZXJ2ZUV2ZW50KGlucHV0JGJvbnVzLCB7CiAgICAgICAgdiRib251cyA8LSAgYXMuaW50ZWdlcihpbnB1dCRib251cykKICAgICAgfSkgIAogICAgICAKICAgICAgCiAgICAgIHJvbGxUb3RhbCA8LSBldmVudFJlYWN0aXZlKGlucHV0JHJvbGwsIHsKICAgICAgICBzdW0oc2FtcGxlKDE6diRudW1TaWRlcywgdiRudW1EaWNlLCByZXBsYWNlID0gVFJVRSkpICsgdiRib251cwogICAgICB9KQoKICAgICAgb3V0cHV0JHJlc3VsdCA8LSByZW5kZXJUZXh0KHsKICAgICAgICBwYXN0ZSgiVG90YWw6Iiwgcm9sbFRvdGFsKCkpCiAgICAgIH0pCiAgICAgICAKICAgIH0KICAgIAogICAgCiAgKQp9CmBgYAoK</div>
 
 
 

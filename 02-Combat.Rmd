@@ -4,3 +4,8 @@
 
 ## Defense
 
+## Dice Roller
+
+```{R, echo = FALSE}
+knitr::include_app("http://127.0.0.1:8001", height = "600px")
+```
